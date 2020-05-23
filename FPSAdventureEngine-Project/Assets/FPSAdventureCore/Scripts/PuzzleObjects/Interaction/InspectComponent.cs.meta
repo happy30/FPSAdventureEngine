@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dd21ad0d47afc574e97659168409d194
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - InspectComponentWithEvent: {fileID: 11400000, guid: 6e8bd222a9f1dbe4880d6dce4276c9f4, type: 2}
+  - InDialogue: {fileID: 11400000, guid: 0c2246c487fa8af4f81afe2917745e69, type: 2}
+  - PointOfInterest: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

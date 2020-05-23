@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8bc8cd7032f34644cbb0fe204f6fbc79
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - InInspectMode: {fileID: 11400000, guid: 7bff0a42ab2694f49beb4467b745cf14, type: 2}
+  - InInspectView: {instanceID: 0}
+  - CanEnterInspectMode: {instanceID: 0}
+  - GameObjectWithEvent: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
