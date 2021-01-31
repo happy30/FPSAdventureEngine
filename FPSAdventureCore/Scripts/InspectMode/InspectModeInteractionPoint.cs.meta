@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c9422a531022f8d45a02b714ccace762
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MouseOverInspectPoint: {fileID: 11400000, guid: bff98413afbdf454085be339d00fd766,
+      type: 2}
+  - _InspectModeInteractionPointEvent: {fileID: 11400000, guid: d4574f0b7ae06e44faed47ef8bf2acff,
+      type: 2}
+  - InDialogue: {fileID: 11400000, guid: c6a7b8ca2d2bfd54f9d40c0af6ef1744, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
