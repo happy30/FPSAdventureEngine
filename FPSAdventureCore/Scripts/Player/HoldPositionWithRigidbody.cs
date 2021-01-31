@@ -1,6 +1,5 @@
 ﻿
 using EventObjects;
-using Klak.Math;
 using UnityEngine;
 
 public class HoldPositionWithRigidbody : MonoBehaviour
@@ -52,7 +51,7 @@ public class HoldPositionWithRigidbody : MonoBehaviour
         _rb.angularVelocity = Vector3.zero;
         var slowSpeed = 2f;
         var speed = _isColliding ? slowSpeed : FollowSpeed;
-        transform.position = ETween.Step(transform.position, HoldTransform.position, speed);
+        transform.position = Vector3.Lerp(transform.position, HoldTransform.position, speed * Time.deltaTime);
         var distance = Vector3.Distance(transform.position, HoldTransform.position);
         if (distance >= MaxDistance && _isColliding) GrabbingObject.SetValue(false);
         if (transform.position.y < Player.transform.position.y - 1.1f) GrabbingObject.SetValue(false);

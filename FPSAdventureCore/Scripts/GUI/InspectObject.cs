@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class InspectObject : MonoBehaviour
 {
-    public InspectComponentWithEvent InspectComponentWithEvent;
-    public InspectModeComponentWithEvent InspectModeComponentWithEvent;
-    public InspectModeInteractionPointWithEvent InspectModeInteractionPoint;
+    /*
+   // public InspectComponentWithEvent InspectComponentWithEvent;
+   // public InspectModeComponentWithEvent InspectModeComponentWithEvent;
+   // public InspectModeInteractionPointWithEvent InspectModeInteractionPoint;
 
     
     public TextMeshProUGUI Text;
@@ -157,5 +158,6 @@ public class InspectObject : MonoBehaviour
         
         _setLine = false;
     }
+    */
 
 }

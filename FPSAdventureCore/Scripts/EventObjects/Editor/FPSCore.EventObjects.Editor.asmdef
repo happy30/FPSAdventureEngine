@@ -1,0 +1,17 @@
+{
+    "name": "FPSCore.EventObjects.Editor",
+    "references": [
+        "GUID:60939aa7fd8c440488fe71e68ce296cb"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

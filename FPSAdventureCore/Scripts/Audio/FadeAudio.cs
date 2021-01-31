@@ -1,59 +1,61 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class FadeAudio : MonoBehaviour
+namespace Packages.FPSAdventureEngine.FPSAdventureCore.Scripts.Audio
 {
-    private AudioSource _source;
-    public float Volume;
-
-    private float initialVolume;
-
-    void Awake()
+    public class FadeAudio : MonoBehaviour
     {
-        _source = GetComponent<AudioSource>();
+        private AudioSource _source;
+        public float Volume;
 
-        if (Math.Abs(initialVolume) < 0.1f)
+        private float initialVolume;
+
+        void Awake()
         {
-            initialVolume = Volume;
+            _source = GetComponent<AudioSource>();
+
+            if (Math.Abs(initialVolume) < 0.1f)
+            {
+                initialVolume = Volume;
+            }
+            else
+            {
+                initialVolume = _source.volume;
+            }
+        
+        
+        
+        
         }
-        else
+
+        public void FadeIn()
         {
-            initialVolume = _source.volume;
+            StartCoroutine(FadeVolumeIn());
         }
-        
-        
-        
-        
-    }
 
-    public void FadeIn()
-    {
-        StartCoroutine(FadeVolumeIn());
-    }
-
-    public void FadeOut()
-    {
-        StartCoroutine(FadeVolumeOut());
-    }
-
-
-    IEnumerator FadeVolumeIn()
-    {
-        while (_source.volume < initialVolume)
+        public void FadeOut()
         {
-            _source.volume += Time.deltaTime * 0.5f;
-            yield return null;
+            StartCoroutine(FadeVolumeOut());
         }
-    }
+
+
+        IEnumerator FadeVolumeIn()
+        {
+            while (_source.volume < initialVolume)
+            {
+                _source.volume += Time.deltaTime * 0.5f;
+                yield return null;
+            }
+        }
     
-    IEnumerator FadeVolumeOut()
-    {
-        while (_source.volume > 0)
+        IEnumerator FadeVolumeOut()
         {
-            _source.volume -= Time.deltaTime * 0.5f;
-            yield return null;
+            while (_source.volume > 0)
+            {
+                _source.volume -= Time.deltaTime * 0.5f;
+                yield return null;
+            }
         }
     }
 }

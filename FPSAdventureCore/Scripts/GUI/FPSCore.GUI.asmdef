@@ -1,0 +1,17 @@
+{
+    "name": "FPSCore.GUI",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:60939aa7fd8c440488fe71e68ce296cb",
+        "GUID:b112b4f190cb65f4c8194e2034d62bcd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

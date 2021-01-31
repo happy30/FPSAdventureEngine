@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace EventObjects
 {
-    
+    /*
     [Serializable]
     [CreateAssetMenu(menuName = "EventObjects/Special/InspectModeComponent", fileName = "New InspectModeComponent")]
     public class InspectModeComponentWithEvent : ValueWithEvent<InspectModeComponent, InspectModeComponentEvent>, IConditional
@@ -17,4 +17,5 @@ namespace EventObjects
 
     [Serializable]
     public class InspectModeComponentVariable : UnityEvent<InspectModeComponent>{}
+    */
 }

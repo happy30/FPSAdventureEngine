@@ -1,0 +1,19 @@
+{
+    "name": "FPSCore.Dialogue.Editor",
+    "references": [
+        "GUID:60939aa7fd8c440488fe71e68ce296cb",
+        "GUID:b112b4f190cb65f4c8194e2034d62bcd",
+        "GUID:25225d7ddd96e074cad68ac45ed26d75"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

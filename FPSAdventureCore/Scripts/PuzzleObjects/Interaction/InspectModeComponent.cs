@@ -7,7 +7,7 @@ using UnityEngine;
 public class InspectModeComponent : MonoBehaviour, IInteractComponent
 {
     public GameObjectWithEvent InspectedObjectEvent;
-    public InspectModeComponentWithEvent InspectModeComponentWithEvent;
+    //public InspectModeComponentWithEvent InspectModeComponentWithEvent;
     public BoolWithEvent InDialogue;
     public BoolWithEvent CanEnterInspectMode;
     public bool InspectTextOnce;
@@ -108,7 +108,7 @@ public class InspectModeComponent : MonoBehaviour, IInteractComponent
         {
             if (_inspected) return;
         }
-        InspectModeComponentWithEvent.Value = this;
+        //InspectModeComponentWithEvent.Value = this;
         InDialogue.Value = true;
     }
     
@@ -119,7 +119,7 @@ public class InspectModeComponent : MonoBehaviour, IInteractComponent
             PointOfInterest.Value = true;
         }
         _inspected = true;
-        InspectModeComponentWithEvent.Value = null;
+        //InspectModeComponentWithEvent.Value = null;
         StartCoroutine(DelayBool());
         
 

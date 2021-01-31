@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using EventObjects;
-using Klak.Math;
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasGroup))]
@@ -23,6 +22,6 @@ public class UIFaderByBoolEvent : MonoBehaviour
     void Update()
     {
         targetAlpha = BoolEvent.Value ? 1 : 0;
-        _cg.alpha = ETween.Step(_cg.alpha, targetAlpha, 5f);
+        _cg.alpha = Mathf.Lerp(_cg.alpha, targetAlpha, 5f * Time.deltaTime);
     }
 }

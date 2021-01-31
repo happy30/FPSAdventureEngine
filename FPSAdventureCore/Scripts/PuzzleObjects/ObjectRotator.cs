@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using EventObjects;
-using Klak.Math;
 
 public class ObjectRotator : MonoBehaviour
 {
 
-    public InspectModeComponentWithEvent InspectModeComponentWithEvent;
+//    public InspectModeComponentWithEvent InspectModeComponentWithEvent;
     public BoolWithEvent MouseOver;
     
     private float _sensitivity;
@@ -38,7 +37,7 @@ public class ObjectRotator : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if (InspectModeComponentWithEvent.Value != null) return;
+        //if (InspectModeComponentWithEvent.Value != null) return;
         
         XaxisRotation = Input.GetAxis("Mouse X")*_sensitivity;
         YaxisRotation = Input.GetAxis("Mouse Y")*_sensitivity;

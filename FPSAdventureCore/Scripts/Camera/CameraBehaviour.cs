@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using EventObjects;
-using Klak.Math;
 using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
@@ -65,7 +64,7 @@ public class CameraBehaviour : MonoBehaviour
                     _timer = 0f;
                 }
 
-                transform.localPosition = ETween.Step(transform.localPosition, originalPos + ShakeOffset, 0.2f);
+                transform.localPosition = Vector3.Lerp(transform.localPosition, originalPos + ShakeOffset, 0.2f * Time.deltaTime);
             }
         }
 

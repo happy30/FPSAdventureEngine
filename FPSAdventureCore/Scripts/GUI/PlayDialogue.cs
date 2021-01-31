@@ -32,7 +32,7 @@ public class PlayDialogue : MonoBehaviour
     private bool _textDone;
 
     public BoolWithEvent LineCompleted;
-    public DialogueWithEvent DialogueWithEvent;
+    //public DialogueWithEvent DialogueWithEvent;
 
     public AudioSource VoiceLineSourceConversant;
     public AudioSource VoiceLineSourcePlayer;
@@ -48,16 +48,16 @@ public class PlayDialogue : MonoBehaviour
 
         if (DebugDialogue != null)
         {
-            DialogueWithEvent.Init();
-            DialogueWithEvent.Value = DebugDialogue;
+           // DialogueWithEvent.Init();
+            //DialogueWithEvent.Value = DebugDialogue;
             currentDialogue = DebugDialogue;
         }
         
         
-        else if (DialogueWithEvent.Value != null)
-        {
-            currentDialogue = DialogueWithEvent.Value;
-        }
+       // else if (DialogueWithEvent.Value != null)
+        //{
+       //     currentDialogue = DialogueWithEvent.Value;
+        //}
 
         StartCoroutine(StartAfterDelay());
 

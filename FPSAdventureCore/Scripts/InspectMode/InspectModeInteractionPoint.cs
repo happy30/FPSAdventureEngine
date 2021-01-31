@@ -7,7 +7,7 @@ public class InspectModeInteractionPoint : MonoBehaviour
 {
     public BoolWithEvent MouseOverInspectPoint;
     private BaseInteractiveObject _baseInteractiveObject;
-    public InspectModeInteractionPointWithEvent _InspectModeInteractionPointEvent;
+    //public InspectModeInteractionPointWithEvent _InspectModeInteractionPointEvent;
     public BoolWithEvent InDialogue;
 
     public string[] Lines;
@@ -32,7 +32,7 @@ public class InspectModeInteractionPoint : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _InspectModeInteractionPointEvent.Value = this;
+       // _InspectModeInteractionPointEvent.Value = this;
         InDialogue.Value = true;
 
         if (EventOnPress != null)
@@ -45,7 +45,7 @@ public class InspectModeInteractionPoint : MonoBehaviour
     
     public void OnTextDeactivate()
     {
-        _InspectModeInteractionPointEvent.Value = null;
+        //_InspectModeInteractionPointEvent.Value = null;
         if (PointOfInterest != null)
         {
             PointOfInterest.Value = true;

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using EventObjects;
-using Klak.Math;
 using UnityEngine;
 
 public class ConstrainHoldPosition : MonoBehaviour

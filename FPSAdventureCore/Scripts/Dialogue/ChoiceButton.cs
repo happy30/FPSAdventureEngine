@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Klak.Math;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,7 +51,7 @@ public class ChoiceButton : MonoBehaviour
     
     void Update()
     {
-        Background.fillAmount = ETween.Step(Background.fillAmount, _targetAmount, FillSpeed);
-        transform.localScale = ETween.Step(transform.localScale, _targetScale, FillSpeed);
+        Background.fillAmount = Mathf.Lerp(Background.fillAmount, _targetAmount, FillSpeed * Time.deltaTime);
+        transform.localScale = Vector3.Lerp(transform.localScale, _targetScale, FillSpeed * Time.deltaTime);
     }
 }

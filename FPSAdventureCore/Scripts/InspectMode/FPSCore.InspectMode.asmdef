@@ -1,0 +1,17 @@
+{
+    "name": "FPSCore.InspectMode",
+    "references": [
+        "GUID:60939aa7fd8c440488fe71e68ce296cb",
+        "GUID:b6eabf78a684df149b36c42ad33d3ade",
+        "GUID:94db94a4ed0a4ca4c994d2f89d61d0d6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

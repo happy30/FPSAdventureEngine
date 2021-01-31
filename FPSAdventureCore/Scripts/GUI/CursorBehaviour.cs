@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using EventObjects;
-using Klak.Math;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,6 +37,6 @@ public class CursorBehaviour : MonoBehaviour
             targetAlpha = 0;
         }
 
-        _cg.alpha = ETween.Step(_cg.alpha, targetAlpha, 22f);
+        _cg.alpha = Mathf.Lerp(_cg.alpha, targetAlpha, 22f*Time.deltaTime);
     }
 }

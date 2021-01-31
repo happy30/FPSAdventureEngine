@@ -174,20 +174,20 @@ namespace EventObjects
     [Serializable] public class FloatEvent : UnityEvent<float>{}
     [Serializable] public class SpriteEvent : UnityEvent<Sprite>{}
     [Serializable] public class StringArrayEvent : UnityEvent<string[]>{}
-    [Serializable] public class InspectComponentEvent : UnityEvent<InspectComponent>{}
-    [Serializable] public class InspectModeComponentEvent : UnityEvent<InspectModeComponent>{}
+    //[Serializable] public class InspectComponentEvent : UnityEvent<InspectComponent>{}
+    //[Serializable] public class InspectModeComponentEvent : UnityEvent<InspectModeComponent>{}
     [Serializable] public class GameObjectEvent : UnityEvent<GameObject>{}
     
     [Serializable] public class TransformEvent : UnityEvent<PosRot>{}
 
-    [Serializable]
-    public class InspectModeInteractionPointEvent : UnityEvent<InspectModeInteractionPoint>
-    {
-    }
+    //[Serializable]
+    //public class InspectModeInteractionPointEvent : UnityEvent<InspectModeInteractionPoint>
+    //{
+    //}
     
-    [Serializable]
-    public class DialogueEvent : UnityEvent<Dialogue>
-    {
-    }
+    //[Serializable]
+    //public class DialogueEvent : UnityEvent<Dialogue>
+    //{
+    //}
     
 }

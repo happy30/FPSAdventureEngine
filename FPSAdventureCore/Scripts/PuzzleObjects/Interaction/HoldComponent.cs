@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using EventObjects;
-using Klak.Math;
 
 using UnityEngine;
 
@@ -75,7 +74,7 @@ public class HoldComponent : MonoBehaviour, IInteractComponent
     {
         //_rb.position = _baseInteractiveObject.HoldTransform.position;
 
-        Object.position = ETween.Step(Object.position, _baseInteractiveObject.HoldTransform.position, FollowSpeed);
+        Object.position = Vector3.Lerp(Object.position, _baseInteractiveObject.HoldTransform.position, FollowSpeed * Time.deltaTime);
 
         
         
