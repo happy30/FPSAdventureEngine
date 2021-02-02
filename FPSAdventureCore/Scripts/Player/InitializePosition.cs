@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class InitializePosition : MonoBehaviour
 {
+/*
     public TransformWithEvent TransformWithEvent;
     public Transform Camera;
 
@@ -27,4 +28,5 @@ public class InitializePosition : MonoBehaviour
         
         Camera.rotation = TransformWithEvent.Value.Rot;
     }
+    */
 }

@@ -4,8 +4,9 @@ using EventObjects;
 using UnityEngine;
 
 [RequireComponent(typeof(HoldComponent))]
-public class InspectModeComponent : MonoBehaviour, IInteractComponent
+public class InspectModeComponent : MonoBehaviour
 {
+    /*
     public GameObjectWithEvent InspectedObjectEvent;
     //public InspectModeComponentWithEvent InspectModeComponentWithEvent;
     public BoolWithEvent InDialogue;
@@ -139,5 +140,5 @@ public class InspectModeComponent : MonoBehaviour, IInteractComponent
         InspectedObjectEvent.Value = null;
         CanEnterInspectMode.Value = false;
     }
-
+*/
 }

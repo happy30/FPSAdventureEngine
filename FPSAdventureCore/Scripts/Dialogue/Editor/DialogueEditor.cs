@@ -238,7 +238,7 @@ public class DialogueEditor : Editor
                     
                     
                     dia.Variable.BoolVariable =
-                        (BoolWithEvent) EditorGUILayout.ObjectField(dia.Variable.BoolVariable, typeof(BoolWithEvent), GUILayout.Width(200));
+                        (BoolWithEvent) EditorGUILayout.ObjectField(dia.Variable.BoolVariable, typeof(BoolWithEvent), true, GUILayout.Width(200));
                     
                     GUILayout.EndHorizontal();
                     GUILayout.BeginHorizontal();
@@ -248,7 +248,7 @@ public class DialogueEditor : Editor
                     {
                         GUI.backgroundColor = Color.cyan;
                     }
-                    dia.Variable.NextDialogueTrue = (Dialogue)EditorGUILayout.ObjectField(dia.Variable.NextDialogueTrue, typeof(Dialogue), GUILayout.Width(200));
+                    dia.Variable.NextDialogueTrue = (Dialogue)EditorGUILayout.ObjectField(dia.Variable.NextDialogueTrue, typeof(Dialogue), true, GUILayout.Width(200));
 
                     GUI.backgroundColor = dia.Color;
                     
@@ -282,7 +282,7 @@ public class DialogueEditor : Editor
                         GUI.backgroundColor = Color.cyan;
                     }
                     
-                    dia.Variable.NextDialogueFalse = (Dialogue)EditorGUILayout.ObjectField(dia.Variable.NextDialogueFalse, typeof(Dialogue), GUILayout.Width(200));
+                    dia.Variable.NextDialogueFalse = (Dialogue)EditorGUILayout.ObjectField(dia.Variable.NextDialogueFalse, typeof(Dialogue), true, GUILayout.Width(200));
 
                     GUI.backgroundColor = dia.Color;
                     
@@ -337,7 +337,7 @@ public class DialogueEditor : Editor
 
             
             dia.DirectTo.NewDialogue =
-                (Dialogue) EditorGUILayout.ObjectField(dia.DirectTo.NewDialogue, typeof(Dialogue),
+                (Dialogue) EditorGUILayout.ObjectField(dia.DirectTo.NewDialogue, typeof(Dialogue), true,
                     GUILayout.Width(180));
             GUI.backgroundColor = dia.Color;
             

@@ -6,7 +6,13 @@ using UnityEngine.Events;
 
 public class InspectComponent : MonoBehaviour, IInteractComponent
 {
+    [HideInInspector]
     public BoolWithEvent InDialogue;
+    
+    [HideInInspector]
+    public InspectComponentWithEvent InspectComponentWithEvent;
+    
+    
     public bool InspectOnce;
     private bool _inspected;
     
@@ -20,7 +26,11 @@ public class InspectComponent : MonoBehaviour, IInteractComponent
 
     private bool _activated;
 
-
+    void Awake()
+    {
+        InDialogue = (BoolWithEvent) Resources.Load("EventObjects/InDialogue");
+        InspectComponentWithEvent = (InspectComponentWithEvent) Resources.Load("EventObjects/InspectComponent");
+    }
 
     public void OnUpdate()
     {
@@ -35,7 +45,7 @@ public class InspectComponent : MonoBehaviour, IInteractComponent
         {
             if (_inspected) return;
         }
-        //InspectComponentWithEvent.Value = this;
+        InspectComponentWithEvent.Value = this;
         InDialogue.Value = true;
         
     }
@@ -76,6 +86,6 @@ public class InspectComponent : MonoBehaviour, IInteractComponent
         }
 
         _inspected = true;
-        //InspectComponentWithEvent.Value = null;
+        InspectComponentWithEvent.Value = null;
     }
 }

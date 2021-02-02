@@ -6,12 +6,10 @@ using UnityEngine;
 
 public class InspectObject : MonoBehaviour
 {
-    /*
-   // public InspectComponentWithEvent InspectComponentWithEvent;
-   // public InspectModeComponentWithEvent InspectModeComponentWithEvent;
-   // public InspectModeInteractionPointWithEvent InspectModeInteractionPoint;
-
     
+    public InspectComponentWithEvent InspectComponent;
+
+
     public TextMeshProUGUI Text;
     private string fullLine;
     private float textSpeed = 0.013f;
@@ -31,29 +29,29 @@ public class InspectObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InspectComponentWithEvent.Value != null)
+        if (InspectComponent.Value != null)
         {
             if (!_setLine)
             {
                 _setLine = true;
-                fullLine = InspectComponentWithEvent.Value.Lines[currentLine];
+                fullLine = InspectComponent.Value.Lines[currentLine];
                 StartCoroutine(FillLine(fullLine, Text, textSpeed));
                 
             }
         }
-        else if(InspectModeComponentWithEvent.Value == null && InspectModeInteractionPoint.Value == null)
+        else 
         {
             currentLine = 0;
             Text.text = "";
         }
 
-        if (InspectComponentWithEvent.Value != null)
+        if (InspectComponent.Value != null)
         {
             if (_setLine && InspectLineCompleted && Input.GetButtonDown("Fire1"))
             {
-                if (currentLine > InspectComponentWithEvent.Value.Lines.Length - 1)
+                if (currentLine > InspectComponent.Value.Lines.Length - 1)
                 {
-                    InspectComponentWithEvent.Value.OnDeactivate();
+                    InspectComponent.Value.OnDeactivate();
                     StartCoroutine(DeactivateAfterDelay());
                 }
                 else
@@ -63,72 +61,6 @@ public class InspectObject : MonoBehaviour
             }
         }
         
-        
-        
-        if (InspectModeComponentWithEvent.Value != null)
-        {
-            if (!_setLine)
-            {
-                _setLine = true;
-                fullLine = InspectModeComponentWithEvent.Value.Lines[currentLine];
-                StartCoroutine(FillLine(fullLine, Text, textSpeed));
-                
-            }
-        }
-        else if (InspectComponentWithEvent.Value == null && InspectModeInteractionPoint.Value == null)
-        {
-            currentLine = 0;
-            Text.text = "";
-        }
-
-        if (InspectModeComponentWithEvent.Value != null)
-        {
-            if (_setLine && InspectLineCompleted && Input.GetButtonDown("Fire1"))
-            {
-                if (currentLine > InspectModeComponentWithEvent.Value.Lines.Length - 1)
-                {
-                    currentLine = 0;
-                    Text.text = "";
-                    InspectModeComponentWithEvent.Value.OnTextDeactivate();
-                }
-
-            
-                    _setLine = false;
-                
-            }
-        }
-        
-        if (InspectModeInteractionPoint.Value != null)
-        {
-            if (!_setLine)
-            {
-                _setLine = true;
-                fullLine = InspectModeInteractionPoint.Value.Lines[currentLine];
-                StartCoroutine(FillLine(fullLine, Text, textSpeed));
-                
-            }
-        }
-        else if (InspectComponentWithEvent.Value == null && InspectModeComponentWithEvent.Value == null)
-        {
-            currentLine = 0;
-            Text.text = "";
-        }
-
-        if (InspectModeInteractionPoint.Value != null)
-        {
-            if (_setLine && InspectLineCompleted && Input.GetButtonDown("Fire1"))
-            {
-                if (currentLine > InspectModeInteractionPoint.Value.Lines.Length - 1)
-                {
-                    currentLine = 0;
-                    Text.text = "";
-                    InspectModeInteractionPoint.Value.OnTextDeactivate();
-                }
-
-                _setLine = false;
-                
-            }
-        }
         
     }
     
@@ -158,6 +90,6 @@ public class InspectObject : MonoBehaviour
         
         _setLine = false;
     }
-    */
+    
 
 }

@@ -19,14 +19,12 @@ public class HoldComponent : MonoBehaviour, IInteractComponent
     
     private bool active;
     private Rigidbody _rb;
-    private bool _isColliding;
+    //private bool _isColliding;
 
     private bool canDrop;
 
     private Transform Object;
 
-    public bool IsParcel;
-    public BoolWithEvent GrabbingParcel;
 
 
     
@@ -85,7 +83,7 @@ public class HoldComponent : MonoBehaviour, IInteractComponent
 
     void CheckForRelease()
     {
-        if (Input.GetButtonDown("Fire2") && _baseInteractiveObject.GrabbingObject.Value && !_baseInteractiveObject.InInspectMode.Value)
+        if (Input.GetButtonDown("Fire2") && _baseInteractiveObject.GrabbingObject.Value)
         {
             _baseInteractiveObject.Release();
         }
@@ -103,11 +101,6 @@ public class HoldComponent : MonoBehaviour, IInteractComponent
         active = true;
         _rb.useGravity = false;
         _baseInteractiveObject.MovementSpeedReductionObject.Value = MovementSpeedReduction;
-
-        if (IsParcel)
-        {
-            GrabbingParcel.Value = true;
-        }
 
 
         var colliders = GetComponents<Collider>();
@@ -134,11 +127,7 @@ public class HoldComponent : MonoBehaviour, IInteractComponent
         _rb.useGravity = true;
         _rb.isKinematic = false;
         _baseInteractiveObject.MovementSpeedReductionObject.Value = 0;
-        
-        if (IsParcel)
-        {
-            GrabbingParcel.Value = false;
-        }
+
         
         var colliders = GetComponents<Collider>();
         var childColliders = GetComponentsInChildren<Collider>();
@@ -157,15 +146,6 @@ public class HoldComponent : MonoBehaviour, IInteractComponent
         canDrop = false;
     }
 
-    void OnCollisionEnter()
-    {
-        _isColliding = true;
-    }
-
-    void OnCollisionExit()
-    {
-        _isColliding = false;
-    }
 
     IEnumerator DropDelay()
     {

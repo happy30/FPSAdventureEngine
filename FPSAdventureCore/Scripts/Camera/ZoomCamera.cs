@@ -1,7 +1,6 @@
 ﻿
 using EventObjects;
 using UnityEngine;
-using Klak.Math;
 
 public class ZoomCamera : MonoBehaviour
 {
@@ -46,7 +45,7 @@ public class ZoomCamera : MonoBehaviour
             SetFieldOfView();
         }
         
-        MainCamera.fieldOfView = ETween.Step(MainCamera.fieldOfView, _targetFieldOfView, ZoomSpeed);
+        MainCamera.fieldOfView = Mathf.Lerp(MainCamera.fieldOfView, _targetFieldOfView, ZoomSpeed * Time.deltaTime);
         
         
     }

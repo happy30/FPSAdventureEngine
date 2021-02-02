@@ -1,6 +1,8 @@
 {
     "name": "FPSCore.EventObjects",
-    "references": [],
+    "references": [
+        "GUID:e99e2374844fa5a428a89340352ae062"
+    ],
     "includePlatforms": [
         "Editor"
     ],

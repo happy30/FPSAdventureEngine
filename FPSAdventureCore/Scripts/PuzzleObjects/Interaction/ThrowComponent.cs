@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class ThrowComponent : MonoBehaviour, IInteractComponent
 {
+    [HideInInspector]
     public BoolWithEvent InDialogue;
 
     private BaseInteractiveObject _baseInteractiveObject;
@@ -20,6 +21,7 @@ public class ThrowComponent : MonoBehaviour, IInteractComponent
 
     void Awake()
     {
+        InDialogue = (BoolWithEvent) Resources.Load("EventObjects/InDialogue");
         _baseInteractiveObject = GetComponent<BaseInteractiveObject>();
         
         if (GetComponent<Rigidbody>())
@@ -36,6 +38,8 @@ public class ThrowComponent : MonoBehaviour, IInteractComponent
         }
         
     }
+
+    
     
     public void OnActivate()
     {
@@ -51,7 +55,7 @@ public class ThrowComponent : MonoBehaviour, IInteractComponent
     {
         if (!active) return;
         
-        if (Input.GetButtonDown("Fire1") && !InDialogue.Value && !_baseInteractiveObject.InInspectMode.Value)
+        if (Input.GetButtonDown("Fire1") && !InDialogue.Value)
         {
             StartCoroutine(ActivateAfterFrame());
         }

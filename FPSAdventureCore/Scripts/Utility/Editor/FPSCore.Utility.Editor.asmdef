@@ -1,6 +1,9 @@
 {
     "name": "FPSCore.Utility.Editor",
-    "references": [],
+    "references": [
+        "GUID:b6eabf78a684df149b36c42ad33d3ade",
+        "GUID:94db94a4ed0a4ca4c994d2f89d61d0d6"
+    ],
     "includePlatforms": [
         "Editor"
     ],

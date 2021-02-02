@@ -1,11 +1,9 @@
 {
-    "name": "FPSCore.Camera",
-    "references": [
-        "GUID:60939aa7fd8c440488fe71e68ce296cb",
-        "GUID:e0121a710a035fe4882ee32ad6ab9549",
-        "GUID:2c94b255f8312e94e938526f79e7609b"
+    "name": "FPSCore.Installation.Editor",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
     ],
-    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

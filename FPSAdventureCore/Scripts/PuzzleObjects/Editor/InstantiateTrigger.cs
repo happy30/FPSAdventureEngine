@@ -3,7 +3,7 @@ using UnityEditor;
 
 public class InstantiateTrigger : EditorWindow
 {
-    [MenuItem("GameObject/Parcel/Create Trigger %&n")]
+    [MenuItem("FPS Adventure Tools/Create Trigger %&n", priority = 10)]
     static void CreateAPrefab()
     {
         //Parent

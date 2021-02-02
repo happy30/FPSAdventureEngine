@@ -6,7 +6,6 @@ using UnityEngine;
 public class ControlMonobehaviours : MonoBehaviour
 {
     public BoolWithEvent InSettings;
-    public BoolWithEvent InInspectMode;
     
     private bool setting;
 
@@ -20,12 +19,11 @@ public class ControlMonobehaviours : MonoBehaviour
     private void Awake()
     {
         InSettings.Value = false;
-        InInspectMode.Value = false;
     }
 
     void Update()
     {
-        disable = InSettings.Value || InInspectMode.Value;
+        disable = InSettings.Value;
         
         
         

@@ -25,8 +25,6 @@ public class BaseInteractiveObject : MonoBehaviour
     [HideInInspector]
     public BoolWithEvent GrabbingObject;
 
-    public BoolWithEvent InInspectMode;
-
     [HideInInspector] public FloatWithEvent MovementSpeedReductionObject;
     
     public Sprite InteractSprite;
@@ -38,7 +36,7 @@ public class BaseInteractiveObject : MonoBehaviour
         var components = GetComponents<IInteractComponent>();
         _manipulators = components;
         GrabbingObject = (BoolWithEvent) Resources.Load("GrabbingObject");
-        MovementSpeedReductionObject = (FloatWithEvent) Resources.Load("MovementReduction");
+        MovementSpeedReductionObject = (FloatWithEvent) Resources.Load("EventObjects/MovementReduction");
 
         if (transform.localScale != Vector3.one)
         {
@@ -74,7 +72,6 @@ public class BaseInteractiveObject : MonoBehaviour
 
     public void Release()
     {
-        Debug.Log("Released");
         
         GrabbingObject.SetValue(false);
         foreach (IInteractComponent component in _manipulators)

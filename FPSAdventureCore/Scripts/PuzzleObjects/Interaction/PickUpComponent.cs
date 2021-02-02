@@ -22,11 +22,6 @@ public class PickUpComponent : MonoBehaviour, IInteractComponent
     {
         if (ItemBoolean != null) ItemBoolean.Value = true;
         MeshGameObject.SetActive(false);
-
-        if (_inspectModeComponent != null)
-        {
-            _inspectModeComponent.EnterInspectMode();
-        }
     }
 
     public void OnUpdate()

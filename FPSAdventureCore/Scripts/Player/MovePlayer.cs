@@ -95,6 +95,8 @@ namespace Player
                    
 
                 _characterController.Move(new Vector3(moveTowardsPos.x, _downForce * Time.deltaTime, moveTowardsPos.z));
+                
+
             
             
             

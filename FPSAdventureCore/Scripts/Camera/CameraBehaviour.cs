@@ -46,10 +46,10 @@ public class CameraBehaviour : MonoBehaviour
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Player.localEulerAngles.y, transform.localEulerAngles.z);
         }
 
-        if (HeadbobbingModifier)
-        {
-            transform.position = transform.position + new Vector3(0, HeadbobbingModifier.GetYBobAmount(), 0);
-        }
+       if (HeadbobbingModifier)
+       {
+           transform.position = transform.position + new Vector3(0, HeadbobbingModifier.GetYBobAmount(), 0);
+       }
 
         if (CameraShake && InCameraShakeMode.Value)
         {
